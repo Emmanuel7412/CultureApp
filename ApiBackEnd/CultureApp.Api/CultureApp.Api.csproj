@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
@@ -22,6 +22,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\CultureApp.Data\CultureApp.Data.csproj" />   
+    <ProjectReference Include="..\CultureApp.Business\CultureApp.Business.csproj" />   
   </ItemGroup>
 
 </Project>

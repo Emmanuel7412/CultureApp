@@ -1,14 +1,17 @@
+using ApiBackEnd.CultureApp.Api.Extensions;
 using ApiBackEnd.CultureApp.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
-builder.Services.AddDbContext<DataContext>(options =>
-{
-    options
-    .UseSqlite("Data Source=..\\CultureApp.Data\\cultureapp.db");
-    //.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
+// builder.Services.AddDbContext<DataContext>(options =>
+// {
+//     options
+//     .UseSqlite("Data Source=..\\CultureApp.Data\\cultureapp.db");
+//     //.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
+// });
+
+builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddCors();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
