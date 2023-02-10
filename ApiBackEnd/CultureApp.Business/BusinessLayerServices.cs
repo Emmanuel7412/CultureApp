@@ -9,6 +9,7 @@ namespace ApiBackEnd.CultureApp.Business
         public static void AddBusinessLayerServices(this IServiceCollection services)
         {
             services.AddScoped<IBSAccount, BSAccount>();
+            services.AddScoped<IBSToken, BSToken>();
         }
     }
 }
